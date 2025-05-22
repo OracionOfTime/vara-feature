@@ -1,0 +1,58 @@
+2025-04-23 22:36:10,054 - INFO - Starting the experimental pipeline.
+2025-04-23 22:36:10,054 - INFO - Parameters: measurements_csv=ml/sampling/measurements/Dune.csv, feature_model_xml=ml/sampling/feature_models/Dune.xml, sample_seed=42, sample_strategy=random, sample_size=100, max_interaction_order=3, margin=0.01, threshold=0.01, learning_seed=42, output_dir=results/
+2025-04-23 22:36:10,054 - INFO - Loading feature model and extracting feature names.
+2025-04-23 22:36:10,059 - INFO - Number of features extracted: 31
+2025-04-23 22:36:10,059 - INFO - Generating sampled configurations using variant generator.
+2025-04-23 22:36:10,075 - INFO - Number of configurations sampled: 100
+2025-04-23 22:36:10,076 - INFO - Sampled configurations exported to results/sampled_configurations.csv
+2025-04-23 22:36:10,077 - INFO - Matching sampled configurations with their performance values.
+2025-04-23 22:36:10,138 - INFO - Number of matched configurations: 100
+2025-04-23 22:36:10,138 - INFO - Training the regression model using stepwise selection.
+2025-04-23 22:36:25,910 - INFO - Selected features: ['BiCGSTABSolver$$cells_51', 'BiCGSTABSolver$$post_0', 'CGSolver$$post_0', 'GradientSolver$$cells_50', 'GradientSolver$$cells_51', 'SeqGS$$cells_50', 'SeqGS$$pre_4', 'cells_50', 'cells_50$$post_0', 'cells_50$$post_2', 'cells_50$$post_3', 'cells_50$$pre_0', 'cells_50$$pre_1', 'cells_50$$pre_4', 'cells_51$$post_0', 'cells_51$$post_1', 'cells_51$$post_2', 'cells_51$$post_5', 'cells_51$$pre_0', 'cells_51$$pre_4', 'cells_51$$pre_5', 'cells_51$$pre_6', 'cells_52$$pre_1', 'cells_53$$post_0', 'cells_53$$pre_1', 'cells_53$$pre_4', 'cells_54$$post_0', 'cells_54$$pre_1', 'cells_55$$post_0', 'post_0', 'post_0$$pre_3', 'post_0$$pre_4', 'post_0$$pre_6', 'post_1$$pre_1', 'post_1$$pre_4', 'post_3$$pre_1', 'post_3$$pre_4', 'pre_4']
+2025-04-23 22:36:25,910 - INFO - Final model:
+2025-04-23 22:36:25,911 - INFO - const                       10649.404388
+BiCGSTABSolver$$cells_51     -606.339388
+BiCGSTABSolver$$post_0      -1284.250000
+CGSolver$$post_0             4864.946429
+GradientSolver$$cells_50    -2096.803333
+GradientSolver$$cells_51    -4201.964847
+SeqGS$$cells_50              1500.379226
+SeqGS$$pre_4                 -908.213265
+cells_50                    -3339.377066
+cells_50$$post_0            -2667.370731
+cells_50$$post_2             4477.149405
+cells_50$$post_3             2350.758750
+cells_50$$pre_0                79.920714
+cells_50$$pre_1             -2167.482619
+cells_50$$pre_4              1342.065842
+cells_51$$post_0             8553.893571
+cells_51$$post_1             3814.286429
+cells_51$$post_2            -3585.584133
+cells_51$$post_5              539.067092
+cells_51$$pre_0              2247.964643
+cells_51$$pre_4             -2825.460918
+cells_51$$pre_5               580.920816
+cells_51$$pre_6             -3752.757755
+cells_52$$pre_1             -1066.044745
+cells_53$$post_0              319.235714
+cells_53$$pre_1               148.003776
+cells_53$$pre_4              -589.453061
+cells_54$$post_0             -207.578571
+cells_54$$pre_1               665.075714
+cells_55$$post_0             4193.028571
+post_0                       2658.702755
+post_0$$pre_3                -270.564286
+post_0$$pre_4               -5953.038980
+post_0$$pre_6               -1195.325000
+post_1$$pre_1                2753.168367
+post_1$$pre_4                 -81.329592
+post_3$$pre_1                 -82.395459
+post_3$$pre_4                -240.008163
+pre_4                         966.399694
+dtype: float64
+2025-04-23 22:36:25,913 - INFO - Trained model exported to results/trained_model.pkl
+2025-04-23 22:36:25,913 - INFO - Loading all configurations for performance prediction.
+2025-04-23 22:36:25,916 - INFO - Total number of configurations: 2304
+2025-04-23 22:36:25,916 - INFO - Predicting performance for all configurations.
+2025-04-23 22:36:25,932 - INFO - Validation Error: 18.085033442537892
+2025-04-23 22:36:25,932 - INFO - Experimental pipeline completed successfully.
