@@ -18,13 +18,13 @@ feature_coef_pairs.sort(key=lambda x:abs(x[1]), reverse=True)
 
 names, values = zip(*feature_coef_pairs)
 
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(12, 6)) #!!!!
 plt.barh(names, values)
 plt.xlabel('Measured Performance')
 plt.title('Girl, whatever')
 plt.gca().invert_yaxis()
 plt.grid(True)
-plt.tight_layout()
+plt.tight_layout() #!!!!!
 
 plt.savefig('bindings/python/plotting', dpi=300)
 plt.show()
